@@ -662,7 +662,7 @@
             <label><span hidden>Nome</span><input name="nome" autocomplete="name" placeholder="Il tuo nome" required></label>
             <label><span hidden>Telefono</span><input name="telefono" type="tel" autocomplete="tel" placeholder="Telefono" required></label>
             <label><span hidden>Email di lavoro</span><input name="email" type="email" autocomplete="email" placeholder="Email di lavoro" required></label>
-            <button class="button" type="submit">Raccontaci il tuo collo di bottiglia <span class="arrow">→</span></button>
+            <button class="button" type="submit">Prenota la discovery call <span class="arrow">→</span></button>
           </form>
           <div class="form-note" id="formNote" aria-live="polite"></div>
         </div>
@@ -1253,7 +1253,7 @@
       } catch (err) {
         note.textContent = 'Qualcosa è andato storto, riprova o scrivici direttamente.';
         button.disabled = false;
-        button.textContent = 'Raccontaci il tuo collo di bottiglia';
+        button.textContent = 'Prenota la discovery call';
       }
     });
     document.getElementById('year').textContent = new Date().getFullYear();
