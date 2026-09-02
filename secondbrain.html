@@ -41,7 +41,7 @@
     }
 
     * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
+    html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
     body {
       margin: 0;
       overflow-x: hidden;
@@ -346,7 +346,7 @@
     .cta-copy { position: relative; z-index: 2; max-width: 630px; }
     .cta-panel h2 { color: #fff; }
     .cta-panel p { color: rgba(255,255,255,.68); }
-    .contact-form { margin-top: 28px; display: grid; grid-template-columns: 1fr 1fr auto; gap: 10px; }
+    .contact-form { margin-top: 28px; display: grid; grid-template-columns: 1fr 1fr 1fr auto; gap: 10px; }
     .contact-form input { min-height: 48px; min-width: 0; padding: 0 15px; border: 1px solid rgba(255,255,255,.22); border-radius: 9px; color: #fff; background: rgba(255,255,255,.09); }
     .contact-form input::placeholder { color: rgba(255,255,255,.52); }
     .contact-form .button { min-height: 48px; border: 0; color: var(--ink); background: #fff; box-shadow: none; }
@@ -659,7 +659,8 @@
           <h2>Candidati ora.</h2>
           <p class="lead">Una discovery call per capire il tuo contesto e i tuoi obiettivi, senza impegno, prima di costruire qualsiasi cosa insieme.</p>
           <form class="contact-form" id="contactForm">
-            <label><span hidden>Nome</span><input name="name" autocomplete="name" placeholder="Il tuo nome" required></label>
+            <label><span hidden>Nome</span><input name="nome" autocomplete="name" placeholder="Il tuo nome" required></label>
+            <label><span hidden>Telefono</span><input name="telefono" type="tel" autocomplete="tel" placeholder="Telefono" required></label>
             <label><span hidden>Email di lavoro</span><input name="email" type="email" autocomplete="email" placeholder="Email di lavoro" required></label>
             <button class="button" type="submit">Raccontaci il tuo collo di bottiglia <span class="arrow">→</span></button>
           </form>
@@ -686,7 +687,7 @@
 
   <footer>
     <div class="shell footer-in">
-      <span>Genea Lab SRL · P. IVA da inserire</span>
+      <span>Genea Lab SRL · P. IVA 04929780239</span>
     </div>
   </footer>
 
@@ -1226,12 +1227,34 @@
       reveals.forEach(item => observer.observe(item));
     }
 
-    document.getElementById('contactForm').addEventListener('submit', event => {
+    /* URL della Web App di Google Apps Script (Deploy > App web) */
+    const ENDPOINT = 'INSERISCI_QUI_URL_APPS_SCRIPT';
+
+    document.getElementById('contactForm').addEventListener('submit', async event => {
       event.preventDefault();
       const form = event.currentTarget;
       if (!form.reportValidity()) return;
-      document.getElementById('formNote').textContent = 'Richiesta pronta. Collega qui il tuo CRM o servizio form per riceverla.';
-      form.querySelector('button').textContent = 'Richiesta pronta ✓';
+      const button = form.querySelector('button');
+      const note = document.getElementById('formNote');
+      const data = Object.fromEntries(new FormData(form).entries());
+
+      button.disabled = true;
+      button.textContent = 'Invio in corso…';
+
+      try {
+        const res = await fetch(ENDPOINT, {
+          method: 'POST',
+          headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+          body: JSON.stringify({ tipo: 'lead', ...data }),
+        });
+        if (!res.ok) throw new Error('Invio non riuscito');
+        const params = new URLSearchParams({ nome: data.nome, email: data.email });
+        window.location.href = 'thankyou.html?' + params.toString();
+      } catch (err) {
+        note.textContent = 'Qualcosa è andato storto, riprova o scrivici direttamente.';
+        button.disabled = false;
+        button.textContent = 'Raccontaci il tuo collo di bottiglia';
+      }
     });
     document.getElementById('year').textContent = new Date().getFullYear();
   </script>
