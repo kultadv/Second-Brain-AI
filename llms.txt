@@ -1,0 +1,31 @@
+# CompanyBrain
+
+> CompanyBrain è il cervello digitale della tua azienda: raccoglie il sapere di come lavori e lo mette a disposizione del tuo team, senza bisogno di essere tecnico o di cambiare gli strumenti che già usi.
+
+CompanyBrain si costruisce insieme al cliente, non è un software da comprare e usare da soli. In una sola giornata di lavoro hands-on si centralizza il sapere aziendale — mail, content, preventivi, report, task utili delle call — in un sistema che il team può interrogare direttamente, riducendo le domande che oggi tornano sempre al titolare.
+
+## Promessa
+
+Costruisci il tuo second brain in 8 ore. Fino al 90% di domande in meno dal tuo team, e un contesto che gestisce mail, content, preventivi, report e i task davvero utili delle call. Senza essere tecnico e senza cambiare gli strumenti che usi già.
+
+## A chi si rivolge
+
+- Imprenditori e titolari di PMI o agenzie italiane strutturate: sopra 1-2M di fatturato con almeno 10 dipendenti, oppure realtà piccole ma pregiate (studi legali, società di consulenza).
+- Chi oggi è il collo di bottiglia della propria azienda: il team dipende da lui per il contesto, gli strumenti aziendali non si parlano tra loro, e il lavoro vero slitta a sera.
+- Non è per chi cerca un software chiuso da comprare e usare in autonomia.
+
+## Offerta
+
+- **Discovery call** — gratuita, per capire il pain dell'azienda e dare una prima risposta consulenziale.
+- **Workshop di 1 giorno** — si costruisce insieme il CompanyBrain, hands-on, sui dati reali dell'azienda.
+- **Call di follow-up** — di gruppo o personale, dopo il workshop.
+
+## Main pages
+
+- [Home](https://genealab.it/): redirect diretto alla pagina CompanyBrain.
+- [CompanyBrain](https://genealab.it/secondbrain.html): pitch, promessa e offerta del servizio.
+
+## Crawling
+
+- [Robots](https://genealab.it/robots.txt)
+- [Sitemap](https://genealab.it/sitemap.xml)
