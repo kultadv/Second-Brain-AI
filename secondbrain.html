@@ -7,10 +7,9 @@
   <title>CompanyBrain</title>
   <link rel="icon" href="favicon.ico">
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
-  <link rel="apple-touch-icon" href="apple-touch-icon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400..700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Commissioner:wght@100..900&display=swap" rel="stylesheet">
   <style>
     /* ================================================================
        STRIPE-LIKE MINIMAL FRAMEWORK
@@ -36,12 +35,12 @@
       --rail: 1px solid rgba(30, 51, 85, .11);
       --shadow: 0 24px 70px rgba(30, 51, 85, .12);
       --ease: cubic-bezier(.2, .75, .25, 1);
-      --sans: "Instrument Sans", ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      --sans: "Commissioner", ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       --mono: Arial, "Helvetica Neue", Helvetica, ui-sans-serif, sans-serif;   /* font delle etichette/occhielli */
     }
 
     * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
+    html { scroll-behavior: smooth; }
     body {
       margin: 0;
       overflow-x: hidden;
@@ -68,8 +67,8 @@
       gap: 9px;
       margin-bottom: 20px;
       color: var(--violet);
-      font: 700 11px/1 var(--mono);
-      letter-spacing: .12em;
+      font: 700 12px/1 var(--mono);
+      letter-spacing: .132em;
       text-transform: uppercase;
     }
     .eyebrow::before {
@@ -81,7 +80,7 @@
       content: "";
     }
     h1, h2, h3, p { margin-top: 0; }
-    h1, h2, h3 { letter-spacing: -.045em; }
+    h1, h2, h3 { letter-spacing: -.0495em; }
     h1 {
       max-width: 900px;
       margin-bottom: 28px;
@@ -105,9 +104,9 @@
     .lead {
       max-width: 650px;
       color: var(--muted);
-      font-size: clamp(18px, 1.6vw, 22px);
+      font-size: clamp(16px, 1.3vw, 19px);
       line-height: 1.48;
-      letter-spacing: -.018em;
+      letter-spacing: -.0198em;
     }
     .gradient-text { color: var(--violet); }
 
@@ -128,7 +127,7 @@
       justify-content: center;
       text-align: center;
     }
-    .topbar p { margin: 0; color: #43566a; font-size: 13.5px; line-height: 1.38; letter-spacing: -.012em; }
+    .topbar p { margin: 0; color: #43566a; font-size: 14.5px; line-height: 1.38; letter-spacing: -.0132em; }
     .topbar strong { color: var(--ink); font-weight: 680; }
 
     /* NAV */
@@ -154,7 +153,7 @@
       gap: 10px;
       color: var(--ink);
       font-weight: 760;
-      letter-spacing: -.04em;
+      letter-spacing: -.044em;
       text-decoration: none;
     }
     .brand-mark {
@@ -165,7 +164,7 @@
       transform: rotate(-9deg);
     }
     .nav-links { display: flex; align-items: center; gap: 28px; margin-right: auto; }
-    .nav-links a { color: #34495e; font-size: 14px; font-weight: 650; text-decoration: none; }
+    .nav-links a { color: #34495e; font-size: 15px; font-weight: 650; text-decoration: none; }
     .nav-links a:hover { color: var(--violet); }
     .nav-actions { display: flex; align-items: center; gap: 11px; }
     .menu-button { display: none; }
@@ -180,7 +179,7 @@
       gap: 8px;
       background: var(--violet);
       color: #fff;
-      font-size: 14px;
+      font-size: 15px;
       font-weight: 730;
       text-decoration: none;
       box-shadow: 0 8px 24px rgba(226, 104, 63, .24);
@@ -201,9 +200,9 @@
     .hero .shell { position: relative; min-height: 790px; padding: 160px 116px 130px; }
     .hero-copy { position: relative; z-index: 5; width: 82%; }
     .hero h1 { max-width: 540px; }
-    .hero .lead { max-width: 620px; }
+    .hero .lead { max-width: 520px; }
     .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 34px; }
-    .trustline { margin-top: 26px; display: flex; align-items: center; gap: 10px; color: #6d7f91; font-size: 13px; }
+    .trustline { margin-top: 26px; display: flex; align-items: center; gap: 10px; color: #6d7f91; font-size: 14px; }
     .trustline i { width: 18px; height: 18px; display: grid; place-items: center; border-radius: 50%; background: #fbeee8; color: var(--violet); font-style: normal; font-weight: 800; }
     /* CERVELLO TECH — point cloud dell'hero */
     .brainviz {
@@ -240,20 +239,21 @@
     /* TRUST STRIP */
     .logo-strip { border-block: var(--rail); background: #fff; }
     .logo-strip .shell { padding: 27px 14px; display: flex; align-items: center; gap: 44px; }
-    .logo-label { flex: none; max-width: 168px; color: var(--soft); font-size: 13px; line-height: 1.35; letter-spacing: -.012em; }
+    .logo-label { flex: none; max-width: 168px; color: var(--soft); font-size: 14px; line-height: 1.35; letter-spacing: -.0132em; }
     .logos { flex: 1; display: grid; grid-template-columns: repeat(7, 1fr); align-items: center; gap: 18px; }
-    .logos span { color: #42566b; font-size: 14px; font-weight: 740; text-align: center; letter-spacing: -.035em; }
+    .logos span { color: #42566b; font-size: 15px; font-weight: 740; text-align: center; letter-spacing: -.0385em; }
 
     /* STATEMENT */
-    .split { max-width: 760px; display: grid; grid-template-columns: 1fr; gap: 26px; align-items: start; }
-    .split-label { color: var(--violet); font: 700 11px/1.4 var(--mono); letter-spacing: .11em; text-transform: uppercase; }
-    .manifesto { font-size: clamp(27px, 2.5vw, 38px); line-height: 1.12; letter-spacing: -.04em; }
+    .split-label { display: block; margin-bottom: 26px; color: var(--violet); font: 700 12px/1.4 var(--mono); letter-spacing: .121em; text-transform: uppercase; }
+    .manifesto { font-size: clamp(27px, 2.5vw, 38px); line-height: 1.12; letter-spacing: -.044em; }
     .manifesto strong { font-weight: 620; }
     .manifesto span { color: var(--soft); }
 
     /* BENTO */
     .solutions { background: var(--wash); border-block: var(--rail); }
-    .solutions .shell { width: min(100% - 40px, 960px); }
+    .brain-head { display: grid; grid-template-columns: 2fr 1fr; gap: 40px; align-items: start; }
+    .brain-head h2 { max-width: none; }
+    .brain-head p { max-width: none; }
     .section-head { display: flex; align-items: end; justify-content: space-between; gap: 40px; margin-bottom: 52px; }
     .section-head p { max-width: 370px; margin-bottom: 6px; color: var(--muted); }
     /* griglia: riga 1 = doppio + singolo, riga 2 = tre singoli, riga 3 = tutta larghezza.
@@ -275,7 +275,7 @@
     .card.medium { grid-column: span 4; }
     .card.third { grid-column: span 4; }
     .card.full { grid-column: span 12; }
-    .card-kicker { margin-bottom: 10px; color: var(--violet); font: 700 10px/1 var(--mono); letter-spacing: .1em; text-transform: uppercase; }
+    .card-kicker { display: block; margin-bottom: 10px; color: var(--violet); font: 800 26px/1 var(--mono); }
     .card p { max-width: 500px; color: var(--muted); }
     .visual { position: relative; flex: 1; min-height: 120px; margin: 24px -26px -26px; overflow: hidden; }
 
@@ -290,21 +290,30 @@
     .connections .n4 { right: 20%; top: 73%; --wire: 170px; --angle: 202deg; background: var(--cyan); }
 
     .dashboard { background: var(--wash); }
-    .dash-window { position: absolute; width: 84%; left: 8%; top: 26px; padding: 18px; border: 1px solid rgba(226,104,63,.18); border-radius: 13px 13px 0 0; background: rgba(255,255,255,.88); box-shadow: 0 15px 40px rgba(30,51,85,.10); }
-    .dash-number { font-size: 38px; font-weight: 700; letter-spacing: -.055em; }
-    .bars { height: 100px; margin-top: 20px; display: flex; align-items: end; gap: 7px; }
-    .bars i { flex: 1; height: var(--h); border-radius: 4px 4px 1px 1px; background: var(--violet); opacity: .85; }
+    .dash-grid { position: absolute; inset: 18px; display: grid; grid-template-columns: 1fr 1fr; grid-auto-rows: 1fr; gap: 10px; }
+    .dash-card { padding: 12px 14px; border: 1px solid rgba(226,104,63,.16); border-radius: 10px; display: flex; flex-direction: column; background: rgba(255,255,255,.9); box-shadow: 0 10px 26px rgba(30,51,85,.08); }
+    .dash-card.dash-line { grid-column: span 2; }
+    .dash-label { margin-bottom: 8px; color: var(--soft); font: 650 9px/1 var(--mono); letter-spacing: .08em; text-transform: uppercase; }
+    .dash-bars-row { flex: 1; display: flex; align-items: end; gap: 5px; }
+    .dash-bars-row i { flex: 1; height: var(--h); min-height: 4px; border-radius: 3px 3px 1px 1px; background: var(--violet); opacity: .85; }
+    .dash-donut { width: 52px; height: 52px; margin: auto; }
+    .dash-spark { flex: 1; width: 100%; height: auto; }
 
     .brief { background: var(--wash); }
     .doc { position: absolute; width: 78%; left: 11%; top: 20px; padding: 20px; border: 1px solid rgba(226,104,63,.24); border-radius: 12px; background: #fff; box-shadow: 0 18px 45px rgba(226,104,63,.12); }
     .doc-badge { display: inline-block; padding: 5px 8px; border-radius: 5px; color: var(--violet); background: #fbeee8; font: 700 9px/1 var(--mono); }
     .doc .line { height: 7px; }
 
-    .history { background: var(--ink); }
-    .chat { position: absolute; inset: 22px 24px auto; display: grid; gap: 10px; }
-    .bubble { width: 78%; padding: 12px 14px; border-radius: 11px; background: rgba(255,255,255,.1); color: rgba(255,255,255,.7); font-size: 11px; }
-    .bubble:nth-child(2) { margin-left: auto; background: var(--violet); color: #fff; }
-    .bubble:nth-child(3) { width: 64%; }
+    .history { background: var(--wash); }
+    .proc-list { position: absolute; inset: 24px; display: grid; gap: 16px; align-content: center; }
+    .proc-row { display: flex; align-items: center; gap: 10px; }
+    .proc-dot { width: 7px; height: 7px; border-radius: 50%; background: rgba(30, 51, 85, .18); flex: none; }
+    .proc-track { flex: 1; height: 8px; border-radius: 99px; background: rgba(30, 51, 85, .08); overflow: hidden; }
+    .proc-track i { display: block; height: 100%; border-radius: 99px; background: rgba(30, 51, 85, .16); }
+    .proc-row.done .proc-dot { background: rgba(30, 51, 85, .32); }
+    .proc-row.active .proc-dot { background: var(--violet); }
+    .proc-row.active .proc-track i { background: var(--violet); }
+    .proc-row.new .proc-track i { background: var(--violet); opacity: .55; }
 
     .workflow { background: #fff; }
     .flow-row { position: absolute; inset: 38% 12% auto; display: flex; align-items: center; justify-content: space-between; }
@@ -313,48 +322,82 @@
 
     /* NUMBERS */
     .metrics { position: relative; overflow: hidden; background: var(--wash); }
-    .metrics .section { position: relative; }
-    .metrics .shell { width: min(100% - 40px, 960px); }
-    .metrics h2 { max-width: 560px; margin-inline: auto; text-align: center; }
-    .metric-grid { margin-top: 62px; border-block: 1px solid rgba(30, 51, 85,.13); display: grid; grid-template-columns: repeat(4, 1fr); }
-    .metric { padding: 34px 26px; text-align: center; border-right: 1px solid rgba(30, 51, 85,.13); }
-    .metric:last-child { border-right: 0; }
-    .metric strong { display: block; margin-bottom: 8px; font-size: clamp(42px, 5vw, 64px); line-height: 1; letter-spacing: -.06em; }
-    .metric span { color: #58718a; font-size: 13px; }
+    .metrics .section { position: relative; z-index: 1; }
+    .metrics-bg { position: absolute; inset: 0; z-index: 0; overflow: hidden; opacity: .25; }
+    .metrics-bg canvas.brain-canvas {
+      position: absolute; top: 50%; left: 50%;
+      min-width: 100%; min-height: 100%; width: auto; height: auto;
+      transform: translate(-50%, -50%);
+    }
+    .metrics h2 { max-width: 560px; }
+    .metric-row { margin-top: 240px; display: grid; grid-template-columns: repeat(3, 1fr); }
+    .metric { padding-right: 46px; }
+    .metric + .metric { padding-left: 46px; border-left: 1px solid rgba(30, 51, 85, .13); }
+    .metric strong { display: block; margin-bottom: 8px; color: var(--violet); font-size: clamp(38px, 4.6vw, 58px); line-height: 1; letter-spacing: -.06em; }
+    .metric span { color: #58718a; font-size: 14px; }
 
     /* PROCESS + FAQ */
     .process-grid { margin-top: 58px; display: grid; grid-template-columns: repeat(3, 1fr); border-top: var(--rail); }
     .step { padding: 32px 28px 20px 0; border-right: var(--rail); }
     .step + .step { padding-left: 28px; }
     .step:last-child { border-right: 0; }
-    .step-number { margin-bottom: 54px; color: var(--violet); font: 700 11px/1 var(--mono); }
     .step h3 { font-size: 24px; }
     .step p { color: var(--muted); }
     .faq-wrap { display: grid; grid-template-columns: .8fr 1.2fr; gap: 90px; align-items: start; }
     .faq-list { border-top: var(--rail); }
     details { border-bottom: var(--rail); }
-    summary { padding: 25px 4px; display: flex; justify-content: space-between; gap: 25px; list-style: none; cursor: pointer; font-size: 17px; font-weight: 660; letter-spacing: -.02em; }
+    summary { padding: 25px 4px; display: flex; justify-content: space-between; gap: 25px; list-style: none; cursor: pointer; font-size: 17px; font-weight: 660; letter-spacing: -.022em; }
     summary::-webkit-details-marker { display: none; }
     summary::after { color: var(--violet); content: "+"; font-size: 22px; font-weight: 400; }
     details[open] summary::after { content: "−"; }
     details p { max-width: 650px; padding: 0 40px 26px 4px; color: var(--muted); }
 
     /* CTA */
-    .cta { padding-top: 0; }
-    .cta-panel { position: relative; overflow: hidden; padding: 72px; border-radius: 22px; background: var(--ink); color: #fff; }
-    .cta-panel::after { position: absolute; width: 540px; height: 540px; right: -130px; top: -270px; border-radius: 50%; background: var(--violet); content: ""; opacity: .9; }
-    .cta-copy { position: relative; z-index: 2; max-width: 630px; }
+    .cta-panel {
+      position: relative;
+      overflow: hidden;
+      padding: 72px;
+      border-radius: 22px;
+      background: var(--ink);
+      color: #fff;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      align-items: center;
+      gap: 40px;
+    }
+    .cta-copy { position: relative; z-index: 2; max-width: 560px; }
     .cta-panel h2 { color: #fff; }
     .cta-panel p { color: rgba(255,255,255,.68); }
-    .contact-form { margin-top: 28px; display: grid; grid-template-columns: 1fr 1fr 1fr auto; gap: 10px; }
-    .contact-form input { min-height: 48px; min-width: 0; padding: 0 15px; border: 1px solid rgba(255,255,255,.22); border-radius: 9px; color: #fff; background: rgba(255,255,255,.09); }
-    .contact-form input::placeholder { color: rgba(255,255,255,.52); }
-    .contact-form .button { min-height: 48px; border: 0; color: var(--ink); background: #fff; box-shadow: none; }
-    .form-note { min-height: 20px; margin-top: 10px; color: rgba(255,255,255,.65); font-size: 12px; }
+    .cta-copy .button { margin-top: 28px; min-height: 48px; border: 0; color: var(--ink); background: #fff; box-shadow: none; }
+    .cta-circle {
+      justify-self: end;
+      width: clamp(180px, 20vw, 320px);
+      height: clamp(180px, 20vw, 320px);
+      margin-right: 12px;
+      border-radius: 50%;
+      background: var(--violet);
+    }
+
+    /* FORM EMBED */
+    .form-embed { margin-top: 40px; }
+    .lead-form { display: grid; grid-template-columns: 1fr 1fr 1fr auto; gap: 10px; }
+    .lead-form .button { white-space: nowrap; }
+    .lead-form input {
+      min-height: 48px;
+      min-width: 0;
+      padding: 0 15px;
+      border: 1px solid var(--line);
+      border-radius: 9px;
+      color: var(--ink);
+      background: #fff;
+      font: inherit;
+    }
+    .lead-form input::placeholder { color: var(--soft); }
+    .form-note { min-height: 20px; margin-top: 10px; color: var(--muted); font-size: 12px; }
 
     footer { border-top: var(--rail); }
-    .footer-in { min-height: 110px; padding: 26px 24px; display: flex; align-items: center; justify-content: space-between; gap: 24px; color: var(--soft); font-size: 13px; }
-    .footer-in .brand { color: var(--ink); font-size: 15px; }
+    .footer-in { min-height: 110px; padding: 26px 24px; display: flex; align-items: center; justify-content: space-between; gap: 24px; color: var(--soft); font-size: 14px; }
+    .footer-in .brand { color: var(--ink); font-size: 16px; }
 
     .reveal { opacity: 0; transform: translateY(18px); transition: opacity .7s var(--ease), transform .7s var(--ease); }
     .reveal.is-visible { opacity: 1; transform: none; }
@@ -364,7 +407,7 @@
       .hero-copy { width: 86%; }
       .brainviz { width: 720px; right: -300px; top: -30px; opacity: .9; }
       .mini-panel { width: 320px; right: 34px; bottom: 60px; }
-      .split, .faq-wrap { grid-template-columns: 1fr; gap: 38px; }
+      .split, .faq-wrap, .brain-head { grid-template-columns: 1fr; gap: 38px; }
       .bento { grid-template-columns: repeat(6, 1fr); grid-template-rows: none; }
       .card.large, .card.medium, .card.third { grid-column: span 3; }
       .card.full { grid-column: span 6; }
@@ -391,65 +434,82 @@
       .logo-strip .shell { padding: 24px 22px; flex-direction: column; align-items: flex-start; gap: 18px; }
       .logo-label { max-width: none; }
       .logos { width: 100%; grid-template-columns: repeat(2, 1fr); }
-      .logos span { font-size: 13px; }
+      .logos span { font-size: 14px; }
       .manifesto { font-size: 34px; }
       .bento { grid-template-columns: 1fr; }
       .bento { grid-template-columns: 1fr; }
       .card.large, .card.medium, .card.third, .card.full { grid-column: 1; height: auto; min-height: 430px; }
-      .metric-grid, .process-grid { grid-template-columns: 1fr; }
-      .metric { border-right: 0; border-bottom: 1px solid rgba(30, 51, 85,.13); }
-      .metric:last-child { border-bottom: 0; }
+      .process-grid { grid-template-columns: 1fr; }
+      .metric-row { margin-top: 120px; grid-template-columns: 1fr; }
+      .metric, .metric + .metric { padding: 0 0 26px; border-left: 0; }
+      .metric + .metric { padding-top: 26px; border-top: 1px solid rgba(30, 51, 85, .13); }
+      .metric:last-child { padding-bottom: 0; }
       .step, .step + .step { padding: 28px 0; border-right: 0; border-bottom: var(--rail); }
       .step:last-child { border-bottom: 0; }
-      .step-number { margin-bottom: 25px; }
       .cta { padding-inline: 14px; }
-      .cta-panel { padding: 56px 24px; }
-      .contact-form { grid-template-columns: 1fr; }
+      .cta-panel { grid-template-columns: 1fr; padding: 56px 24px; }
+      .cta-circle { display: none; }
+      .lead-form { grid-template-columns: 1fr; }
       .footer-in { align-items: flex-start; flex-direction: column; }
     }
     @media (prefers-reduced-motion: reduce) {
       html { scroll-behavior: auto; }
       *, *::before, *::after { animation: none !important; transition: none !important; }
       .reveal { opacity: 1; transform: none; }
+      .stack-card { transform: none !important; filter: none !important; }
     }
 
-    /* ---- I TRE BLOCCHI NARRATIVI (stesso manifesto, ripetuto tre volte) ---- */
-    .split.with-viz { max-width: none; grid-template-columns: minmax(0, 1.02fr) minmax(0, .98fr); gap: 58px; align-items: center; }
-    .split.with-viz h2.stmt { max-width: 560px; margin-bottom: 22px; font-size: clamp(27px, 2.5vw, 37px); line-height: 1.1; font-weight: 620; }
-    .split.with-viz .stmt-body { max-width: 510px; margin: 0; color: var(--muted); font-size: 16.5px; line-height: 1.62; letter-spacing: -.012em; }
-    .split.with-viz + .split.with-viz { margin-top: 104px; }
-    .split.with-viz.flip .split-copy { order: 2; }
-    .panel { overflow: hidden; border: 1px solid var(--line); border-radius: var(--radius); background: var(--wash); }
+    /* ---- I TRE BLOCCHI NARRATIVI — card impilate con effetto scroll ---- */
+    .stack-section { background: var(--paper); border-block: var(--rail); }
+    .stack { position: relative; }
+    .stack-card {
+      position: sticky;
+      top: 28px;
+      margin-bottom: 28px;
+      min-height: 560px;
+      padding: 56px;
+      overflow: hidden;
+      border-radius: 28px;
+      background: #fff;
+      border: 1px solid var(--line);
+      display: grid;
+      grid-template-columns: minmax(0, 1.02fr) minmax(0, .98fr);
+      align-items: center;
+      gap: 58px;
+      box-shadow: 0 26px 60px rgba(30, 51, 85, .12);
+      transform-origin: top center;
+      will-change: transform, filter;
+    }
+    .stack-card h2.stmt { max-width: 560px; margin-bottom: 22px; font-size: clamp(27px, 2.5vw, 37px); line-height: 1.1; font-weight: 620; }
+    .stack-card .stmt-body { max-width: 480px; margin: 0; color: var(--muted); font-size: 16.5px; line-height: 1.62; letter-spacing: -.0132em; }
+    .stack-panel { position: relative; align-self: stretch; display: flex; align-items: center; overflow: hidden; border: 1px solid var(--line); border-radius: 16px; background: var(--wash); }
 
     /* ---- LE TRE DOMANDE (stessa griglia a 3 colonne) ---- */
+    .objections-head { max-width: 620px; margin-bottom: 68px; }
     .process-grid.bare { margin-top: 0; }
-    .objection h3 { font-size: clamp(20px, 2vw, 23px); line-height: 1.14; margin-bottom: 14px; }
-    .objection p { color: var(--muted); font-size: 15.5px; }
-    .objection .step-number { margin-bottom: 44px; }
+    .process-grid.bare .step { padding-top: 44px; padding-right: 38px; padding-bottom: 40px; }
+    .process-grid.bare .step + .step { padding-left: 38px; }
+    .objection h3 { font-size: clamp(20px, 2vw, 23px); line-height: 1.3; margin-bottom: 20px; }
+    .objection p { color: var(--muted); font-size: 16.5px; line-height: 1.65; }
 
     /* ---- STAGE: il Company Brain a tutta larghezza ---- */
     .stage { margin-top: 46px; overflow: hidden; border: 1px solid var(--line); border-radius: var(--radius); background: #fff; }
     .stage-top { display: flex; gap: 7px; padding: 14px 18px; border-bottom: 1px solid var(--line); background: var(--wash); }
     .stage-top i { width: 9px; height: 9px; border-radius: 50%; background: #d9e1ea; }
     .stage-top i:first-child { background: var(--violet); opacity: .65; }
+    .stage-frame { display: block; width: 100%; aspect-ratio: 1180 / 470; border: 0; background: var(--ink); }
 
     /* ---- GRAFICHE STATICHE DELLE CARD ---- */
-    .spark { display: block; width: 100%; height: 96px; margin-top: 16px; }
+    .slide-stack { position: absolute; inset: 0; }
     .slidecard { position: absolute; width: 80%; left: 10%; top: 24px; padding: 20px; border: 1px solid rgba(226, 104, 63, .18); border-radius: 12px; background: #fff; box-shadow: 0 16px 42px rgba(30, 51, 85, .10); }
     .slidecard .line { height: 7px; }
     .slidecard .line.head { width: 62%; height: 12px; margin-top: 0; background: #c8d3e0; }
+    .slidecard.s1 { z-index: 1; }
+    .slidecard.s2 { top: 64px; z-index: 2; }
+    .slidecard.s3 { top: 104px; z-index: 3; }
     .slide-foot { margin-top: 20px; display: flex; justify-content: flex-end; }
     .bars-sm { width: 42%; height: 46px; display: flex; align-items: end; gap: 5px; }
     .bars-sm i { flex: 1; height: var(--h); border-radius: 3px 3px 1px 1px; background: var(--violet); opacity: .75; }
-    .thread { position: absolute; inset: 32px 30px auto 34px; padding-left: 26px; }
-    .thread::before { position: absolute; left: 3px; top: 5px; bottom: 5px; width: 1px; background: rgba(255, 255, 255, .14); content: ""; }
-    .thread .t-dot { position: absolute; left: 0; width: 7px; height: 7px; border-radius: 50%; }
-    .thread .d1 { top: 1px; background: var(--violet); }
-    .thread .d2 { top: 31px; background: rgba(255, 255, 255, .55); }
-    .thread .d3 { top: 61px; background: rgba(226, 104, 63, .55); }
-    .thread .d4 { top: 91px; background: rgba(255, 255, 255, .28); }
-    .thread .line { height: 8px; margin-top: 22px; background: rgba(255, 255, 255, .16); }
-    .thread .line:first-of-type { margin-top: 0; }
     .doc.compact { width: 34%; left: 33%; top: 30px; }
     .w54 { width: 54%; } .w88 { width: 88%; } .w40 { width: 40%; }
 
@@ -461,29 +521,28 @@
     .visual.ink { background: var(--ink); }
 
     /* ---- CHI SIAMO ---- */
-    .about-wrap { display: grid; grid-template-columns: .8fr 1.2fr; gap: 90px; align-items: start; }
+    .about-wrap { display: grid; grid-template-columns: 1fr 1fr; gap: 90px; align-items: start; }
     .about-wrap p { max-width: 420px; color: var(--muted); }
-    .about-list { margin: 0; padding: 0; border-top: var(--rail); list-style: none; }
-    .about-list li { position: relative; padding: 25px 4px 25px 30px; border-bottom: var(--rail); font-size: 17px; font-weight: 560; letter-spacing: -.02em; }
-    .about-list li::before { position: absolute; left: 4px; top: 33px; width: 6px; height: 6px; border-radius: 50%; background: var(--violet); box-shadow: 0 0 0 5px rgba(226, 104, 63, .12); content: ""; }
+    .about-stats { display: grid; border-top: var(--rail); }
+    .about-stat { display: grid; grid-template-columns: 100px 1fr; column-gap: 22px; align-items: center; padding: 26px 4px; border-bottom: var(--rail); }
+    .about-stat strong { color: var(--ink); font-size: clamp(38px, 4vw, 52px); font-weight: 620; letter-spacing: -.055em; }
+    .about-stat span { color: var(--muted); font-size: 16px; }
     .logos.six { grid-template-columns: repeat(6, 1fr); }
 
     @media (max-width: 960px) {
-      .split.with-viz { grid-template-columns: 1fr; gap: 34px; }
-      .split.with-viz.flip .split-copy { order: 0; }
-      .split.with-viz + .split.with-viz { margin-top: 72px; }
+      .stack-card { grid-template-columns: 1fr; padding: 40px 28px; min-height: 0; gap: 34px; }
+      .stack-panel { order: -1; }
       .about-wrap { grid-template-columns: 1fr; gap: 38px; }
     }
     .footer-in { justify-content: center; text-align: center; }
-    .split.with-viz .split-label { display: block; margin-bottom: 26px; }
 
     /* ---- LE VOCI DEGLI IMPRENDITORI ---- */
     .quote-strip { border-block: var(--rail); background: #fff; }
     .quote-strip .shell { display: grid; grid-template-columns: repeat(3, 1fr); }
     .quote-strip figure { margin: 0; padding: 40px 34px; border-right: var(--rail); }
     .quote-strip figure:last-child { border-right: 0; }
-    .quote-strip blockquote { margin: 0 0 18px; color: var(--ink); font-size: 15.5px; line-height: 1.5; letter-spacing: -.02em; }
-    .quote-strip figcaption { color: var(--soft); font: 650 10px/1.4 var(--mono); letter-spacing: .11em; text-transform: uppercase; }
+    .quote-strip blockquote { margin: 0 0 18px; color: var(--ink); font-size: 16.5px; line-height: 1.5; letter-spacing: -.022em; }
+    .quote-strip figcaption { color: var(--soft); font: 650 11px/1.4 var(--mono); letter-spacing: .121em; text-transform: uppercase; }
 
     @media (max-width: 720px) {
       .quote-strip .shell { grid-template-columns: 1fr; }
@@ -504,7 +563,7 @@
     <section class="hero">
       <div class="shell">
         <div class="brainviz" aria-hidden="true">
-          <canvas id="brainCanvas" width="1700" height="1150"></canvas>
+          <canvas id="brainCanvas" class="brain-canvas" width="1700" height="1150"></canvas>
         </div>
         <div class="hero-copy reveal">
           <span class="eyebrow">Il tuo sapere a servizio del tuo team</span>
@@ -535,67 +594,143 @@
       </div>
     </div>
 
-    <!-- ============ I TRE BLOCCHI ============ -->
-    <section class="shell section" id="problema">
-      <div class="split with-viz reveal">
-        <div class="split-copy">
-          <span class="split-label">01</span>
-          <h2 class="stmt">Il problema non è che lavori troppo. È che il sapere dell'azienda vive solo nella tua testa.</h2>
-          <p class="stmt-body">Ogni domanda passa da te perché il contesto ce l'hai solo tu. Mail, gestionale, CRM e drive non si parlano tra loro: nessuno di loro ha il quadro completo, solo tu. Il risultato: il lavoro vero, quello che solo tu puoi fare, slitta a sera.</p>
-        </div>
-        <div class="panel" aria-hidden="true"><canvas class="viz" data-viz="converge" width="640" height="470"></canvas></div>
-      </div>
+    <!-- ============ I TRE BLOCCHI — card impilate con effetto scroll ============ -->
+    <section class="stack-section" id="problema">
+      <div class="stack shell section">
+        <article class="stack-card reveal" style="z-index: 1;">
+          <div class="split-copy">
+            <span class="split-label">Centralizzazione del sapere</span>
+            <h2 class="stmt">Il problema non è che lavori troppo. È che il sapere dell'azienda vive solo nella tua testa.</h2>
+            <p class="stmt-body">Ogni domanda passa da te perché il contesto ce l'hai solo tu. Mail, gestionale, CRM e drive non si parlano tra loro: nessuno di loro ha il quadro completo, solo tu. Il risultato: il lavoro vero, quello che solo tu puoi fare, slitta a sera.</p>
+          </div>
+          <div class="stack-panel" aria-hidden="true"><canvas class="viz" data-viz="converge" width="640" height="470"></canvas></div>
+        </article>
 
-      <div class="split with-viz flip reveal">
-        <div class="split-copy">
-          <span class="split-label">02</span>
-          <h2 class="stmt">Non un altro tool da imparare. Un collaboratore che già sa come lavori.</h2>
-          <p class="stmt-body">CompanyBrain non è un software da configurare: gli parli come parleresti a un collaboratore, e lui ha già il contesto della tua azienda, dei tuoi clienti, del tuo modo di lavorare. Non stai comprando uno strumento in più: stai smettendo di essere l'unico che sa tutto.</p>
-        </div>
-        <div class="panel" aria-hidden="true"><canvas class="viz" data-viz="cardchat" width="640" height="470"></canvas></div>
-      </div>
+        <article class="stack-card reveal" style="z-index: 2;">
+          <div class="split-copy">
+            <span class="split-label">Un'intelligenza artificiale come collaboratore</span>
+            <h2 class="stmt">Non un altro tool da imparare. Un collaboratore che già sa come lavori.</h2>
+            <p class="stmt-body">CompanyBrain non è un software da configurare: gli parli come parleresti a un collaboratore, e lui ha già il contesto della tua azienda, dei tuoi clienti, del tuo modo di lavorare. Non stai comprando uno strumento in più: stai smettendo di essere l'unico che sa tutto.</p>
+          </div>
+          <div class="stack-panel" aria-hidden="true"><canvas class="viz" data-viz="cardchat" width="640" height="470"></canvas></div>
+        </article>
 
-      <div class="split with-viz reveal">
-        <div class="split-copy">
-          <span class="split-label">03</span>
-          <h2 class="stmt">Il tempo che perdi non è nelle decisioni importanti. È nei task che si ripetono uguali ogni settimana.</h2>
-          <p class="stmt-body">Aggiornare il CRM dopo ogni call, scrivere l'ennesimo preventivo cambiando solo due numeri, rispondere a mail che tornano sempre uguali. Il tuo CompanyBrain conosce già come li fai: te li prepara lui, tu li rivedi e li mandi. Non elimina il tuo giudizio, elimina la parte meccanica che viene prima del tuo giudizio.</p>
-        </div>
-        <div class="panel" aria-hidden="true"><canvas class="viz" data-viz="statbars" width="640" height="470"></canvas></div>
+        <article class="stack-card reveal" style="z-index: 3;">
+          <div class="split-copy">
+            <span class="split-label">Task che si risolvono con una conversazione</span>
+            <h2 class="stmt">Il tempo che perdi non è nelle decisioni importanti. È nei task che si ripetono uguali ogni settimana.</h2>
+            <p class="stmt-body">Aggiornare il CRM dopo ogni call, scrivere l'ennesimo preventivo cambiando solo due numeri, rispondere a mail che tornano sempre uguali. Il tuo CompanyBrain conosce già come li fai: te li prepara lui, tu li rivedi e li mandi. Non elimina il tuo giudizio, elimina la parte meccanica che viene prima del tuo giudizio.</p>
+          </div>
+          <div class="stack-panel" aria-hidden="true"><canvas class="viz" data-viz="statbars" width="640" height="470"></canvas></div>
+        </article>
       </div>
     </section>
 
     <!-- ============ IL COMPANY BRAIN ============ -->
     <section class="solutions" id="companybrain">
       <div class="shell section">
-        <div class="reveal">
+        <div class="brain-head reveal">
           <h2>Quello che hai davanti è un Company Brain.</h2>
           <p class="lead">Aree di lavoro, progetti, documenti, contesto aziendale, tutto collegato. Il tuo lo costruisci nella giornata di workshop: con i tuoi dati, i tuoi processi, i tuoi clienti già dentro.</p>
         </div>
-        <div class="stage reveal" aria-hidden="true">
+        <div class="stage reveal">
           <div class="stage-top"><i></i><i></i><i></i></div>
-          <canvas class="viz" data-viz="graph" width="1180" height="470"></canvas>
+          <iframe class="stage-frame" srcdoc="<!doctype html>
+<html lang=&quot;it&quot;>
+<head>
+  <meta charset=&quot;utf-8&quot;>
+  <meta name=&quot;viewport&quot; content=&quot;width=device-width,initial-scale=1&quot;>
+  <title>Mappa della conoscenza</title>
+  <style>
+    :root{--night:#1e3355}*{box-sizing:border-box}html,body{width:100%;height:100%;margin:0;background:var(--night)}body{overflow:hidden}canvas{display:block;width:100vw;height:100vh;background:var(--night);cursor:grab;touch-action:none}canvas:active{cursor:grabbing}
+  </style>
+</head>
+<body>
+  <canvas id=&quot;knowledge-network&quot; aria-label=&quot;Mappa tridimensionale e interattiva delle conoscenze e dei processi aziendali.&quot;></canvas>
+  <script>
+    (() => {
+      const canvas=document.querySelector('#knowledge-network'),ctx=canvas.getContext('2d');
+      const reduceMotion=matchMedia('(prefers-reduced-motion: reduce)').matches,NIGHT='#1e3355',ORANGE='#e2683f';
+      const labels=[
+        'Conoscenza','Strategia','Processi','Persone','Clienti','Vendite','Marketing','Operazioni','Finanza','Prodotto',
+        'CRM','Lead','Pipeline','Campagne ads','Rete vendita','Follow-up','Customer care','Feedback','Proposte','Contratti',
+        'Onboarding','Formazione','Competenze','Ruoli','Hiring','Knowledge base','FAQ','Procedure','Checklist','Template',
+        'Riunioni','Brief','De-brief','Decisioni','Priorità','Obiettivi','KPI','Report','Dashboard','Forecast',
+        'Contesto','AI','Integrazioni','Notifiche','Permessi','Archivio','Documenti','Asset','Brand','Contenuti',
+        'Newsletter','Social','SEO','Partnership','Fornitori','Progetti','Roadmap','Budget','Qualità','Innovazione',
+        'Ricerca','Mercato','Competitor','Offerta','Pricing','Retention','Referral','NPS','Community','Eventi',
+        'Logistica','Sistemi','Sicurezza','Compliance','Policy','Esperimenti','Insight','Casi studio','Metodo','Visione',
+        'Missione','Valori','Leadership','Team','Tempo','Risorse','Pianificazione','Risultati','Apprendimenti','Azioni'
+      ];
+      const hubs=new Set([0,1,2,3,4,5,6,7,8,9,10,15,21,25,33,35,40,45,49,55,62,71,79,83,89]);
+      const active=new Set(['0-1','0-2','0-3','0-4','0-5','0-6','0-7','0-8','0-9','1-35','2-27','3-21','4-10','5-14','6-13','7-40','8-57','9-56','10-11','10-12','13-49','15-16','21-22','25-26','33-34','35-36','40-41','45-46','55-56','62-63','71-72','79-80','83-84','89-90']);
+      let width,height,dpr,radius,drag=null,yaw=-.35,pitch=-.18,zoom=1,velocity={x:0,y:0};
+      const nodes=labels.map((label,i)=>{const theta=Math.PI*(3-Math.sqrt(5))*i,y=1-i/(labels.length-1)*2,r=Math.sqrt(1-y*y);return{label,x:Math.cos(theta)*r,y,z:Math.sin(theta)*r,hub:hubs.has(i),phase:i*.417}});
+      // Micro-nodi senza etichetta: aumentano la sensazione di una base di conoscenza ampia,
+      // senza rendere la mappa una parete di testo.
+      Array.from({length:170},(_,i)=>{const theta=Math.PI*(3-Math.sqrt(5))*(i+.37),y=1-(i+.5)/170*2,r=Math.sqrt(1-y*y);return{label:'',x:Math.cos(theta)*r,y,z:Math.sin(theta)*r,hub:false,micro:true,phase:(i+labels.length)*.417}}).forEach(node=>nodes.push(node));
+      const links=[];
+      nodes.forEach((node,i)=>nodes.map((other,j)=>({j,d:(node.x-other.x)**2+(node.y-other.y)**2+(node.z-other.z)**2})).filter(x=>x.j>i).sort((a,b)=>a.d-b.d).slice(0,node.hub?5:node.micro?2:3).forEach(({j})=>links.push({a:i,b:j,active:active.has(`${i}-${j}`)||(node.hub&&j%5===0),phase:(i*17+j)*.19})));
+      [[0,40],[0,55],[1,62],[2,71],[3,83],[4,49],[5,89],[6,79],[7,45],[8,35],[9,25],[10,65],[15,85],[21,75],[33,53],[40,88]].forEach(([a,b])=>links.push({a,b,active:true,phase:a+b}));
+      function resize(){dpr=Math.min(devicePixelRatio||1,2);width=canvas.clientWidth;height=canvas.clientHeight;canvas.width=width*dpr;canvas.height=height*dpr;ctx.setTransform(dpr,0,0,dpr,0,0);radius=Math.min(width,height)*.72}
+      function project(n){const cy=Math.cos(yaw),sy=Math.sin(yaw),cp=Math.cos(pitch),sp=Math.sin(pitch),x1=n.x*cy-n.z*sy,z1=n.x*sy+n.z*cy,y1=n.y*cp-z1*sp,z2=n.y*sp+z1*cp,s=1+z2*.19;return{x:width/2+x1*radius*zoom*s,y:height/2+y1*radius*zoom*s,z:z2,scale:s}}
+      const rgba=(r,g,b,a)=>`rgba(${r},${g},${b},${a})`;
+      function render(t){
+        ctx.fillStyle=NIGHT;ctx.fillRect(0,0,width,height);
+        if(!drag&&!reduceMotion){yaw+=.00125+velocity.x;pitch+=velocity.y;velocity.x*=.955;velocity.y*=.955}pitch=Math.max(-1.18,Math.min(1.18,pitch));
+        const points=nodes.map(project),depth=i=>points[i].z;
+        links.sort((a,b)=>depth(a.a)+depth(a.b)-depth(b.a)-depth(b.b)).forEach(link=>{
+          const a=points[link.a],b=points[link.b],front=(a.z+b.z+2)/4;if(front<.04)return;
+          ctx.beginPath();ctx.moveTo(a.x,a.y);ctx.lineTo(b.x,b.y);ctx.lineWidth=link.active?.9+front*.72:.45+front*.35;ctx.strokeStyle=link.active?rgba(226,104,63,.06+front*.48):rgba(211,224,237,.018+front*.21);ctx.stroke();
+          if(link.active&&front>.27){const j=(t*.00017+link.phase)%1,x=a.x+(b.x-a.x)*j,y=a.y+(b.y-a.y)*j;ctx.beginPath();ctx.arc(x,y,3.2+front*1.3,0,Math.PI*2);ctx.fillStyle=rgba(226,104,63,.08+front*.2);ctx.fill();ctx.beginPath();ctx.arc(x,y,1.2+front*.8,0,Math.PI*2);ctx.fillStyle=ORANGE;ctx.fill()}
+        });
+        nodes.map((node,i)=>({node,p:points[i]})).sort((a,b)=>a.p.z-b.p.z).forEach(({node,p})=>{
+          const front=(p.z+1)/2;if(front<.035)return;const core=(node.hub?3.5:(node.micro ? .78 : 1.35))*p.scale*zoom;
+          if(node.hub&&front>.32){const pulse=.5+.5*Math.sin(t*.0018+node.phase);ctx.beginPath();ctx.arc(p.x,p.y,core+7+pulse*4,0,Math.PI*2);ctx.fillStyle=rgba(226,104,63,.045+pulse*.055);ctx.fill()}
+          ctx.beginPath();ctx.arc(p.x,p.y,core*(.72+front*.28),0,Math.PI*2);ctx.fillStyle=node.hub?rgba(226,104,63,.18+front*.82):rgba(224,233,242,.06+front*.83);ctx.fill();
+          if(node.label&&front>.64&&p.scale*zoom>.96){ctx.font=`${node.hub?600:450} ${node.hub?16.5:13.5}px Inter,ui-sans-serif,system-ui,sans-serif`;ctx.textBaseline='middle';ctx.fillStyle=node.hub?rgba(246,249,252,.9):rgba(224,233,242,.55+front*.25);ctx.fillText(node.label,p.x+core+6,p.y)}
+        });requestAnimationFrame(render)
+      }
+      function changeZoom(f){zoom=Math.max(.62,Math.min(1.8,zoom*f))}
+      let engaged=false;
+      // Lo zoom con la rotellina si attiva solo dopo un clic sulla mappa,
+      // cosi' lo scroll della pagina che la contiene non viene mai catturato per errore.
+      canvas.addEventListener('wheel',e=>{if(!engaged)return;e.preventDefault();changeZoom(e.deltaY<0?1.1:.91)},{passive:false});
+      canvas.addEventListener('pointerdown',e=>{engaged=true;drag={x:e.clientX,y:e.clientY,yaw,pitch};canvas.setPointerCapture(e.pointerId)});
+      canvas.addEventListener('pointermove',e=>{if(!drag)return;const dx=e.clientX-drag.x,dy=e.clientY-drag.y;yaw=drag.yaw+dx*.007;pitch=drag.pitch+dy*.007;velocity={x:dx*.000075,y:dy*.000075}});
+      canvas.addEventListener('pointerup',()=>drag=null);canvas.addEventListener('pointercancel',()=>drag=null);
+      canvas.addEventListener('pointerleave',()=>engaged=false);
+      addEventListener('resize',resize);resize();requestAnimationFrame(render);
+    })();
+  </script>
+</body>
+</html>
+" title="Mappa interattiva della conoscenza aziendale"></iframe>
         </div>
       </div>
     </section>
 
     <!-- ============ LE TRE DOMANDE ============ -->
     <section class="shell section" id="dubbi">
+      <div class="objections-head">
+        <span class="eyebrow">La forza di un LLM personale per il tuo business</span>
+        <h2>Le domande che ci fanno più spesso prima di iniziare.</h2>
+      </div>
       <div class="process-grid bare">
-        <article class="step objection reveal"><div class="step-number">01</div><h3>Funziona davvero, o è l'ennesimo tool AI che promette e non mantiene?</h3><p>Se hai già provato l'AI e l'hai mollata, probabilmente è successo per lo stesso motivo ogni volta: dovevi rispiegare tutto da capo a ogni conversazione. CompanyBrain parte da un presupposto diverso: ha già il quadro completo della tua azienda e conosce il contesto, non riparte da zero ogni volta che gli parli.</p></article>
-        <article class="step objection reveal"><div class="step-number">02</div><h3>Non sono tecnico. Sarò davvero in grado di usarlo?</h3><p>Non serve saper programmare né scrivere prompt. Gli parli come parleresti a un collaboratore. E non lo costruisci da solo con un manuale: nel workshop di 1 giornata lo costruiamo insieme, sul tuo CompanyBrain reale, non su un caso d'esempio.</p></article>
-        <article class="step objection reveal"><div class="step-number">03</div><h3>La mia azienda è troppo piccola o poco organizzata per una cosa così?</h3><p>È vero il contrario: più il sapere è concentrato in poche persone, spesso solo in te, più l'impatto è immediato. Non serve essere già strutturati, non serve cambiare gli strumenti che usi oggi, non serve un reparto IT interno.</p></article>
+        <article class="step objection reveal"><h3>Funziona davvero, o è l'ennesimo tool AI che promette e non mantiene?</h3><p>Se hai già provato l'AI e l'hai mollata, probabilmente è successo per lo stesso motivo ogni volta: dovevi rispiegare tutto da capo a ogni conversazione. CompanyBrain parte da un presupposto diverso: ha già il quadro completo della tua azienda e conosce il contesto, non riparte da zero ogni volta che gli parli.</p></article>
+        <article class="step objection reveal"><h3>Non sono tecnico. Sarò davvero in grado di usare uno strumento AI?</h3><p>Non serve saper programmare né scrivere prompt. Gli parli come parleresti a un collaboratore. E non lo costruisci da solo con un manuale: nel workshop di 1 giornata lo costruiamo insieme, sul tuo CompanyBrain reale, non su un caso d'esempio.</p></article>
+        <article class="step objection reveal"><h3>La mia azienda è troppo piccola o poco organizzata per una cosa così?</h3><p>È vero il contrario: più il sapere è concentrato in poche persone, spesso solo in te, più l'impatto è immediato. Non serve essere già strutturati, non serve cambiare gli strumenti che usi oggi, non serve un reparto IT interno.</p></article>
       </div>
     </section>
 
     <!-- ============ CHI SIAMO ============ -->
     <section class="metrics" id="risultati">
+      <div class="metrics-bg" aria-hidden="true"><canvas class="brain-canvas" width="1700" height="1150"></canvas></div>
       <div class="shell section reveal">
-        <h2>Dedicati ad operazioni strategiche,<br>delega al tuo team.</h2>
-        <div class="metric-grid">
-          <div class="metric"><strong>8h</strong><span>per costruire la prima versione operativa</span></div>
-          <div class="metric"><strong>−90%</strong><span>di domande ripetitive al titolare</span></div>
-          <div class="metric"><strong>7</strong><span>aziende già accompagnate con il metodo</span></div>
+        <h2>Il tempo che risparmi,<br>lo reinvesti dove conta davvero.</h2>
+        <div class="metric-row">
+          <div class="metric"><strong>&lt;8h</strong><span>per costruire la prima versione operativa</span></div>
+          <div class="metric"><strong>1</strong><span>giornata di workshop per costruirlo insieme</span></div>
           <div class="metric"><strong>0</strong><span>strumenti da sostituire per iniziare</span></div>
         </div>
       </div>
@@ -609,11 +744,11 @@
           <h2>Abbiamo passato mesi a costruire il nostro CompanyBrain prima di proporlo a chiunque altro.</h2>
           <p>Da lì, lo abbiamo affiancato a titolari e team operativi che vivevano lo stesso collo di bottiglia in cui ti trovi.</p>
         </div>
-        <ul class="about-list reveal">
-          <li>7 aziende hanno costruito il proprio CompanyBrain con questo metodo.</li>
-          <li>Fino al 90% di domande in meno agli imprenditori dal team.</li>
-          <li>Performance del tuo team x3 con un solo strumento.</li>
-        </ul>
+        <div class="about-stats reveal">
+          <div class="about-stat"><strong>7</strong><span>aziende hanno costruito il proprio CompanyBrain con questo metodo</span></div>
+          <div class="about-stat"><strong>90%</strong><span>di domande in meno agli imprenditori dal team</span></div>
+          <div class="about-stat"><strong>x3</strong><span>performance del tuo team con un solo strumento</span></div>
+        </div>
       </div>
     </section>
 
@@ -625,27 +760,60 @@
         </div>
         <div class="bento">
           <article class="card large reveal">
-            <span class="card-kicker">01</span><h3>Si collega ai sistemi che usi già</h3><p>Interfacciabilità con CRM e strumenti di comunicazione: il Company Brain legge da lì, non li sostituisce.</p>
+            <span class="card-kicker">•</span><h3>Si collega ai sistemi che usi già</h3><p>Interfacciabilità con CRM e strumenti di comunicazione: il Company Brain legge da lì, non li sostituisce.</p>
             <div class="visual paper" aria-hidden="true"><canvas class="viz" data-viz="hubdots" width="900" height="360"></canvas></div>
           </article>
           <article class="card medium reveal">
-            <span class="card-kicker">02</span><h3>Dashboard a colpo d'occhio</h3><p>Tutti i numeri che contano dell'azienda, raccolti da fonti diverse, leggibili in un'unica vista, senza rincorrerli manualmente ogni volta.</p>
-            <div class="visual dashboard" aria-hidden="true"><div class="dash-window"><div class="dash-number">90<span class="gradient-text">%</span></div><svg class="spark" viewBox="0 0 300 96" preserveAspectRatio="none"><path d="M0 78 L50 58 L100 66 L150 40 L200 46 L250 20 L300 10 L300 96 L0 96 Z" fill="rgba(226,104,63,.10)"/><path d="M0 78 L50 58 L100 66 L150 40 L200 46 L250 20 L300 10" fill="none" stroke="#e2683f" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></div></div>
+            <span class="card-kicker">•</span><h3>Dashboard a colpo d'occhio</h3><p>Tutti i numeri che contano dell'azienda, raccolti da fonti diverse, leggibili in un'unica vista, senza rincorrerli manualmente ogni volta.</p>
+            <div class="visual dashboard" aria-hidden="true">
+              <div class="dash-grid">
+                <div class="dash-card dash-bars">
+                  <span class="dash-label">Vendite</span>
+                  <div class="dash-bars-row"><i style="--h:38%"></i><i style="--h:62%"></i><i style="--h:48%"></i><i style="--h:80%"></i><i style="--h:66%"></i></div>
+                </div>
+                <div class="dash-card dash-pie">
+                  <span class="dash-label">Canali</span>
+                  <svg class="dash-donut" viewBox="0 0 36 36">
+                    <circle cx="18" cy="18" r="15.5" fill="none" stroke="#e2e9f2" stroke-width="4"/>
+                    <circle cx="18" cy="18" r="15.5" fill="none" stroke="#e2683f" stroke-width="4" stroke-dasharray="58 100" stroke-linecap="round" transform="rotate(-90 18 18)"/>
+                  </svg>
+                </div>
+                <div class="dash-card dash-line">
+                  <span class="dash-label">Trend</span>
+                  <svg class="dash-spark" viewBox="0 0 240 60" preserveAspectRatio="none">
+                    <path d="M0 46 L34 34 L68 40 L102 20 L136 26 L170 10 L204 14 L240 4" fill="none" stroke="#1e3355" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </div>
+              </div>
+            </div>
           </article>
           <article class="card third reveal">
-            <span class="card-kicker">03</span><h3>Presentazioni pronte, senza cercare dati a mano</h3><p>Crea PowerPoint efficaci con una visione d'insieme e il contesto giusto già dentro, perché i tuoi software sono già connessi e si parlano tra loro.</p>
-            <div class="visual brief" aria-hidden="true"><div class="slidecard"><div class="line head"></div><div class="line w72"></div><div class="line w46"></div><div class="slide-foot"><div class="bars-sm"><i style="--h:34%"></i><i style="--h:58%"></i><i style="--h:44%"></i><i style="--h:82%"></i></div></div></div></div>
+            <span class="card-kicker">•</span><h3>Presentazioni pronte, senza cercare dati a mano</h3><p>Crea PowerPoint efficaci con una visione d'insieme e il contesto giusto già dentro, perché i tuoi software sono già connessi e si parlano tra loro.</p>
+            <div class="visual brief" aria-hidden="true">
+              <div class="slide-stack">
+                <div class="slidecard s3"><div class="line head"></div><div class="line w72"></div><div class="line w46"></div><div class="slide-foot"><div class="bars-sm"><i style="--h:34%"></i><i style="--h:58%"></i><i style="--h:44%"></i><i style="--h:82%"></i></div></div></div>
+                <div class="slidecard s2"><div class="line head"></div><div class="line w72"></div><div class="line w46"></div><div class="slide-foot"><div class="bars-sm"><i style="--h:34%"></i><i style="--h:58%"></i><i style="--h:44%"></i><i style="--h:82%"></i></div></div></div>
+                <div class="slidecard s1"><div class="line head"></div><div class="line w72"></div><div class="line w46"></div><div class="slide-foot"><div class="bars-sm"><i style="--h:34%"></i><i style="--h:58%"></i><i style="--h:44%"></i><i style="--h:82%"></i></div></div></div>
+              </div>
+            </div>
           </article>
           <article class="card third reveal">
-            <span class="card-kicker">04</span><h3>Trasforma un'intuizione in un progetto vendibile</h3><p>Una sola conversazione che fa ricerca di mercato, costruisce KPI utilizzabili e prepara la presentazione, per uso interno, esterno, o come nuovo servizio da proporre.</p>
-            <div class="visual ink" aria-hidden="true"><canvas class="viz" data-viz="morph" data-inv="1" width="460" height="330"></canvas></div>
+            <span class="card-kicker">•</span><h3>Trasforma un'intuizione in un progetto vendibile</h3><p>Una sola conversazione che fa ricerca di mercato, costruisce KPI utilizzabili e prepara la presentazione, per uso interno, esterno, o come nuovo servizio da proporre.</p>
+            <div class="visual wash" aria-hidden="true"><canvas class="viz" data-viz="morph" width="460" height="330"></canvas></div>
           </article>
           <article class="card third reveal">
-            <span class="card-kicker">05</span><h3>Traccia decisioni, azioni e processi in un'unica chat</h3><p>Perché quel cliente non ha chiuso, cosa gli avevi proposto, richiamato in un secondo e non ricostruito a memoria. È uno storico dell'azienda: non dipende da chi ricorda meglio, e riapplica i processi che hanno già funzionato invece di reinventarli ogni volta.</p>
-            <div class="visual history" aria-hidden="true"><div class="thread"><span class="t-dot d1"></span><span class="t-dot d2"></span><span class="t-dot d3"></span><span class="t-dot d4"></span><div class="line w72"></div><div class="line w54"></div><div class="line w88"></div><div class="line w40"></div></div></div>
+            <span class="card-kicker">•</span><h3>Traccia decisioni, azioni e processi in un'unica chat</h3><p>Perché quel cliente non ha chiuso, cosa gli avevi proposto, richiamato in un secondo e non ricostruito a memoria. È uno storico dell'azienda: non dipende da chi ricorda meglio, e riapplica i processi che hanno già funzionato invece di reinventarli ogni volta.</p>
+            <div class="visual history" aria-hidden="true">
+              <div class="proc-list">
+                <div class="proc-row active"><span class="proc-dot"></span><div class="proc-track"><i style="width:100%"></i></div></div>
+                <div class="proc-row done"><span class="proc-dot"></span><div class="proc-track"><i style="width:100%"></i></div></div>
+                <div class="proc-row done"><span class="proc-dot"></span><div class="proc-track"><i style="width:100%"></i></div></div>
+                <div class="proc-row new"><span class="proc-dot"></span><div class="proc-track"><i style="width:50%"></i></div></div>
+              </div>
+            </div>
           </article>
           <article class="card full reveal">
-            <span class="card-kicker">06</span><h3>Brief e debrief pronto ad ogni riunione importante</h3><p>Storico cliente, numeri rilevanti, decisioni prese, raccolti automaticamente prima di un incontro con un cliente, un investitore, un fornitore.</p>
+            <span class="card-kicker">•</span><h3>Brief e debrief pronto ad ogni riunione importante</h3><p>Storico cliente, numeri rilevanti, decisioni prese, raccolti automaticamente prima di un incontro con un cliente, un investitore, un fornitore.</p>
             <div class="visual brief" aria-hidden="true"><div class="doc compact"><span class="doc-badge">BRIEF</span><div class="line w90"></div><div class="line w72"></div><div class="line w46"></div></div></div>
           </article>
         </div>
@@ -658,14 +826,9 @@
         <div class="cta-copy">
           <h2>Candidati ora.</h2>
           <p class="lead">Una discovery call per capire il tuo contesto e i tuoi obiettivi, senza impegno, prima di costruire qualsiasi cosa insieme.</p>
-          <form class="contact-form" id="contactForm">
-            <label><span hidden>Nome</span><input name="nome" autocomplete="name" placeholder="Il tuo nome" required></label>
-            <label><span hidden>Telefono</span><input name="telefono" type="tel" autocomplete="tel" placeholder="Telefono" required></label>
-            <label><span hidden>Email di lavoro</span><input name="email" type="email" autocomplete="email" placeholder="Email di lavoro" required></label>
-            <button class="button" type="submit">Prenota la discovery call <span class="arrow">→</span></button>
-          </form>
-          <div class="form-note" id="formNote" aria-live="polite"></div>
+          <a class="button" href="#candidati-form">Raccontaci il tuo collo di bottiglia <span class="arrow">→</span></a>
         </div>
+        <div class="cta-circle" aria-hidden="true"></div>
       </div>
     </section>
 
@@ -683,7 +846,69 @@
         </div>
       </div>
     </section>
+
+    <!-- ============ FORM CANDIDATURA (EMBED) ============ -->
+    <section class="shell section" id="candidati-form">
+      <div class="reveal">
+        <span class="eyebrow">Candidati ora</span>
+        <h2>Raccontaci il tuo collo di bottiglia.</h2>
+        <p class="lead">Una discovery call per capire il tuo contesto e i tuoi obiettivi, senza impegno, prima di costruire qualsiasi cosa insieme.</p>
+      </div>
+      <div class="form-embed reveal">
+        <form class="lead-form" id="contactForm">
+          <label><span hidden>Nome</span>
+            <input name="nome" autocomplete="name" placeholder="Il tuo nome" required>
+          </label>
+          <label><span hidden>Telefono</span>
+            <input name="telefono" type="tel" autocomplete="tel" placeholder="Telefono" required>
+          </label>
+          <label><span hidden>Email di lavoro</span>
+            <input name="email" type="email" autocomplete="email" placeholder="Email di lavoro" required>
+          </label>
+          <button class="button" type="submit">Prenota la discovery call <span class="arrow">→</span></button>
+        </form>
+        <div class="form-note" id="formNote" aria-live="polite"></div>
+      </div>
+    </section>
   </main>
+
+  <script>
+    /* Web App di Google Apps Script — progetto "CompanyBrain form", deploy v1 */
+    const ENDPOINT = 'https://script.google.com/macros/s/AKfycbzTesh2257voriNTgc6CJrTOywr7TkhqAAFebKengZVcRniQMVXti_khNmVhQy8P3aS3Q/exec';
+
+    /* Pagina di ringraziamento a cui mandare l'utente dopo l'invio */
+    const THANKYOU = 'https://genealab.it/thankyou.html';
+
+    document.getElementById('contactForm').addEventListener('submit', async event => {
+      event.preventDefault();
+      const form = event.currentTarget;
+      if (!form.reportValidity()) return;
+
+      const button = form.querySelector('button');
+      const note = document.getElementById('formNote');
+      const data = Object.fromEntries(new FormData(form).entries());
+
+      button.disabled = true;
+      button.textContent = 'Invio in corso…';
+
+      try {
+        /* Content-Type text/plain: evita il preflight CORS, che Apps Script non gestisce */
+        const res = await fetch(ENDPOINT, {
+          method: 'POST',
+          headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+          body: JSON.stringify({ tipo: 'lead', ...data }),
+        });
+        if (!res.ok) throw new Error('Invio non riuscito');
+
+        const params = new URLSearchParams({ nome: data.nome, email: data.email });
+        window.location.href = THANKYOU + '?' + params.toString();
+      } catch (err) {
+        note.textContent = 'Qualcosa è andato storto, riprova o scrivici direttamente.';
+        button.disabled = false;
+        button.textContent = 'Prenota la discovery call';
+      }
+    });
+  </script>
 
   <footer>
     <div class="shell footer-in">
@@ -694,8 +919,7 @@
   <script>
     /* ---------- CERVELLO TECH — point cloud che si scompone e ricompone ---------- */
     (function buildBrain() {
-      const canvas = document.getElementById('brainCanvas');
-      if (!canvas) return;
+      function build(canvas) {
       const ctx = canvas.getContext('2d');
       const W = 1700, H = 1150;
       const dpr = Math.min(window.devicePixelRatio || 1, 1.5);
@@ -939,14 +1163,30 @@
       }
 
       if (reduced) { draw(.12, 0); return; }
-      const t0 = performance.now();
+      /* il ciclo riparte ogni volta che il canvas rientra nello scroll, cosi' il
+         movimento si vede sempre appena la sezione appare, non solo al primo carico */
+      let on = false, t0 = performance.now();
+      if ('IntersectionObserver' in window) {
+        new IntersectionObserver(entries => {
+          entries.forEach(e => {
+            if (e.isIntersecting) { if (!on) { on = true; t0 = performance.now(); } }
+            else on = false;
+          });
+        }, { threshold: .05 }).observe(canvas);
+      } else {
+        on = true;
+      }
       function frame(now) {
-        const phase = ((now - t0) % CYCLE) / CYCLE;
-        /* si parte da espanso: 1 = scomposto, 0 = cervello compatto */
-        draw(Math.abs(1 - 2 * phase), now - t0);
+        if (on) {
+          const phase = ((now - t0) % CYCLE) / CYCLE;
+          /* si parte da espanso: 1 = scomposto, 0 = cervello compatto */
+          draw(Math.abs(1 - 2 * phase), now - t0);
+        }
         requestAnimationFrame(frame);
       }
       requestAnimationFrame(frame);
+      }
+      document.querySelectorAll('.brain-canvas').forEach(build);
     })();
 
     /* ---------- MICRO-VIZ — le stesse regole del cervello, in piccolo ---------- */
@@ -992,90 +1232,187 @@
         }
       };
 
+      /* punto sul perimetro di una forma, parametrizzato da t in [0,1): usato per far
+         "camminare" ogni particella nella stessa posizione relativa su forme diverse */
+      function shapeOutline(shape, t, cx, cy, R) {
+        const TAU = 6.283185307;
+        if (shape === 'circle') {
+          const a = t * TAU;
+          return { x: cx + Math.cos(a) * R, y: cy + Math.sin(a) * R };
+        }
+        if (shape === 'rect' || shape === 'square') {
+          const hw = shape === 'rect' ? R * 1.3 : R * .92, hh = shape === 'rect' ? R * .58 : R * .92;
+          const per = 2 * (hw + hh), d = t * per;
+          if (d < hw * 2) return { x: cx - hw + d, y: cy - hh };
+          const d2 = d - hw * 2;
+          if (d2 < hh * 2) return { x: cx + hw, y: cy - hh + d2 };
+          const d3 = d2 - hh * 2;
+          if (d3 < hw * 2) return { x: cx + hw - d3, y: cy + hh };
+          const d4 = d3 - hw * 2;
+          return { x: cx - hw, y: cy + hh - d4 };
+        }
+        if (shape === 'triangle') {
+          const verts = [0, 1, 2].map(k => {
+            const a = -Math.PI / 2 + k * TAU / 3;
+            return [cx + Math.cos(a) * R, cy + Math.sin(a) * R];
+          });
+          const seg = Math.min(2, Math.floor(t * 3)), lt = t * 3 - seg;
+          const a = verts[seg], b = verts[(seg + 1) % 3];
+          return { x: a[0] + (b[0] - a[0]) * lt, y: a[1] + (b[1] - a[1]) * lt };
+        }
+        /* stella */
+        const spikes = 5, outerR = R * 1.08, innerR = R * .46, n = spikes * 2;
+        const verts = [];
+        for (let k = 0; k < n; k++) {
+          const a = -Math.PI / 2 + k * Math.PI / spikes;
+          const r = k % 2 === 0 ? outerR : innerR;
+          verts.push([cx + Math.cos(a) * r, cy + Math.sin(a) * r]);
+        }
+        const seg = Math.min(n - 1, Math.floor(t * n)), lt = t * n - seg;
+        const a = verts[seg], b = verts[(seg + 1) % n];
+        return { x: a[0] + (b[0] - a[0]) * lt, y: a[1] + (b[1] - a[1]) * lt };
+      }
+
+      /* punto dentro il riempimento di una forma, da (u,v) in [0,1)^2: usato insieme
+         a shapeOutline cosi' ogni forma ha sia il contorno sia l'interno pieno di puntini */
+      function shapeFill(shape, u, v, cx, cy, R) {
+        if (shape === 'circle') {
+          const a = v * 6.283185307, rr = R * Math.sqrt(u);
+          return { x: cx + Math.cos(a) * rr, y: cy + Math.sin(a) * rr };
+        }
+        if (shape === 'rect' || shape === 'square') {
+          const hw = shape === 'rect' ? R * 1.3 : R * .92, hh = shape === 'rect' ? R * .58 : R * .92;
+          return { x: cx + (u * 2 - 1) * hw, y: cy + (v * 2 - 1) * hh };
+        }
+        if (shape === 'triangle') {
+          const verts = [0, 1, 2].map(k => {
+            const a = -Math.PI / 2 + k * 6.283185307 / 3;
+            return [cx + Math.cos(a) * R, cy + Math.sin(a) * R];
+          });
+          const su = Math.sqrt(u), wa = 1 - su, wb = su * (1 - v), wc = su * v;
+          return {
+            x: wa * verts[0][0] + wb * verts[1][0] + wc * verts[2][0],
+            y: wa * verts[0][1] + wb * verts[1][1] + wc * verts[2][1]
+          };
+        }
+        /* stella: e' un dominio "a stella" rispetto al centro, quindi basta un raggio
+           massimo che varia con l'angolo per riempirla di puntini senza uscire dal contorno */
+        const spikes = 5, outerR = R * 1.08, innerR = R * .46, step = Math.PI / spikes;
+        const theta = v * 6.283185307;
+        let ang = theta + Math.PI / 2;
+        ang = ((ang % (2 * Math.PI)) + 2 * Math.PI) % (2 * Math.PI);
+        const k = Math.floor(ang / step), lt = (ang - k * step) / step;
+        const rA = k % 2 === 0 ? outerR : innerR, rB = k % 2 === 0 ? innerR : outerR;
+        const maxR = rA + (rB - rA) * lt, rr = maxR * Math.sqrt(u);
+        return { x: cx + Math.cos(theta) * rr, y: cy + Math.sin(theta) * rr };
+      }
+
       const BUILD = {
         /* [ANIMATA — segnali] puntini allineati, uniti da una linea sottile a un punto centrale */
         hubdots(W, H) {
           const pts = [], links = [];
-          U.disc(pts, W * .70, H * .50, 19, .26, { s: 1.7, a: .5, r: 0 });
+          const cx = W * .5, cy = H * .5, R = Math.min(W, H) * .38;
+          U.disc(pts, cx, cy, 20, .3, { s: 1.9, a: .55, r: 0 });
           const hub = pts.length - 1;
-          [0, .38, .72, 1].forEach(function (t, i) {
-            U.disc(pts, W * .22, H * .20 + i * (H * .20), 7.5, .38, { s: 1.6, a: .85, r: 0, t: t });
-            links.push([pts.length - 1, hub, .13]);
-          });
+          const N = 6;
+          for (let i = 0; i < N; i++) {
+            const ang = (i / N) * 6.283 - Math.PI / 2;
+            U.disc(pts, cx + Math.cos(ang) * R, cy + Math.sin(ang) * R * .82, 8, .42, { s: 1.7, a: .85, r: 0, t: i / (N - 1) });
+            links.push([pts.length - 1, hub, .14]);
+          }
           for (let i = 0; i < 260; i++) pts.push({ x: rnd(0, W), y: rnd(0, H), s: 1.2, a: .1, r: 0 });
           return { pts: pts, links: links, mode: 'pulse' };
         },
 
-        /* [ANIMATA — morph] forma a gradiente che si allunga da cerchio a rettangolo */
+        /* [ANIMATA — morph] la stessa nuvola cambia rapidamente forma: cerchio, rettangolo,
+           triangolo, quadrato, stella, poi ricomincia */
         morph(W, H) {
-          const pts = [], cx = W / 2, cy = H / 2, w = W * .60, h = H * .24, R = Math.min(w, h) * .95;
-          for (let i = 0; i < 620; i++) {
-            const a = Math.random() * 6.283, rr = R * Math.sqrt(Math.random());
-            pts.push({
-              x: cx - w / 2 + Math.random() * w, y: cy - h / 2 + Math.random() * h,
-              sx: cx + Math.cos(a) * rr, sy: cy + Math.sin(a) * rr,
-              s: 1.5, a: .42, r: 0
-            });
+          const cx = W / 2, cy = H / 2, R = Math.min(W, H) * .34;
+          const shapeNames = ['circle', 'rect', 'triangle', 'square', 'star'];
+          const pts = [];
+          const N_OUT = 140;
+          for (let i = 0; i < N_OUT; i++) {
+            const t = i / N_OUT;
+            const shapes = shapeNames.map(s => shapeOutline(s, t, cx, cy, R));
+            pts.push({ x: shapes[0].x, y: shapes[0].y, shapes: shapes, s: 2, a: .82 });
           }
-          return { pts: pts, links: [] };
+          const N_FILL = 260;
+          for (let i = 0; i < N_FILL; i++) {
+            const u = Math.random(), v = Math.random();
+            const shapes = shapeNames.map(s => shapeFill(s, u, v, cx, cy, R));
+            pts.push({ x: shapes[0].x, y: shapes[0].y, shapes: shapes, s: 1.7, a: .5 });
+          }
+          return { pts: pts, links: [], mode: 'morph5' };
         },
 
-        /* cerchio pieno a gradiente, linee sottilissime che convergono al centro */
+        /* immagine A: cerchio che converge al centro (il sapere che passa solo da te).
+           immagine B: quattro gruppi scollegati (mail, gestionale, CRM, drive che non si parlano). */
         converge(W, H) {
           const pts = [], links = [], cx = W / 2, cy = H / 2, R = Math.min(W, H) * .30;
-          U.disc(pts, cx, cy, R, .075, { s: 1.6, a: .5, r: .04 });
-          U.disc(pts, cx, cy, 6, .5, { s: 1.7, a: .8, r: .02 });
+          const N_HALO = 150;
+          for (let i = 0; i < N_HALO; i++) {
+            const ang = Math.random() * 6.283, rr = R * Math.sqrt(Math.random());
+            pts.push({ x: cx + Math.cos(ang) * rr, y: cy + Math.sin(ang) * rr, s: 1.6, a: .42 });
+          }
+          pts.push({ x: cx, y: cy, s: 1.9, a: .85 });
           const core = pts.length - 1;
           for (let i = 0; i < 30; i++) {
             const ang = (i / 30) * 6.283 + rnd(-.05, .05), rr = R * rnd(1.7, 2.2);
-            pts.push({ x: cx + Math.cos(ang) * rr, y: cy + Math.sin(ang) * rr * .8, s: 2, a: .5, r: .12 });
+            pts.push({ x: cx + Math.cos(ang) * rr, y: cy + Math.sin(ang) * rr * .8, s: 2, a: .5 });
             links.push([pts.length - 1, core, .085]);
           }
+          const clusters = [[W * .18, H * .22], [W * .82, H * .2], [W * .2, H * .8], [W * .8, H * .8]];
+          pts.forEach(function (p, i) {
+            const c = clusters[i % clusters.length];
+            const ang = Math.random() * 6.283, rr = 8 + Math.random() * 26;
+            p.sx = c[0] + Math.cos(ang) * rr;
+            p.sy = c[1] + Math.sin(ang) * rr;
+          });
           return { pts: pts, links: links };
         },
 
-        /* una sola card, finestra di chat, bordo sottile e righe placeholder */
+        /* immagine A: la finestra di chat (il collaboratore con cui parli).
+           immagine B: due nodi connessi da un solo filo (tu e chi lavora con te). */
         cardchat(W, H) {
           const pts = [], w = W * .60, h = H * .52, x = (W - w) / 2, y = (H - h) / 2;
-          U.box(pts, x, y, w, h, 2.6, { s: 1.5, a: .55, r: .05 });
-          U.seg(pts, x, y + 44, x + w, y + 44, 3.4, { s: 1.3, a: .28, r: .06 });
-          [[20, .08], [36, .55], [52, 1]].forEach(d => U.disc(pts, x + d[0], y + 22, 4, .4, { s: 1.4, a: .75, r: .04, t: d[1] }));
-          [[.82, 0], [.64, 1], [.42, 2]].forEach(b => U.fill(pts, x + 28, y + 82 + b[1] * 36, (w - 56) * b[0], 10, .13, { s: 1.4, a: .32, t: 0, r: .07 }));
+          U.box(pts, x, y, w, h, 2.6, { s: 1.5, a: .55 });
+          U.seg(pts, x, y + 44, x + w, y + 44, 3.4, { s: 1.3, a: .28 });
+          [[20, .08], [36, .55], [52, 1]].forEach(d => U.disc(pts, x + d[0], y + 22, 4, .4, { s: 1.4, a: .75, t: d[1] }));
+          [[.82, 0], [.64, 1], [.42, 2]].forEach(b => U.fill(pts, x + 28, y + 82 + b[1] * 36, (w - 56) * b[0], 10, .13, { s: 1.4, a: .32, t: 0 }));
+          const p1 = [W * .34, H * .5], p2 = [W * .66, H * .5];
+          pts.forEach(function (p) {
+            const f = Math.random();
+            if (f < .46) {
+              const ang = Math.random() * 6.283, rr = 46 * Math.sqrt(Math.random());
+              p.sx = p1[0] + Math.cos(ang) * rr; p.sy = p1[1] + Math.sin(ang) * rr;
+            } else if (f < .92) {
+              const ang = Math.random() * 6.283, rr = 46 * Math.sqrt(Math.random());
+              p.sx = p2[0] + Math.cos(ang) * rr; p.sy = p2[1] + Math.sin(ang) * rr;
+            } else {
+              p.sx = (p1[0] + 40) + ((p2[0] - 40) - (p1[0] + 40)) * Math.random();
+              p.sy = p1[1] + (Math.random() - .5) * 4;
+            }
+          });
           return { pts: pts, links: [] };
         },
 
-        /* due barre: una lunga e grigia, una corta e a gradiente */
+        /* immagine A: due barre a confronto (il tempo speso oggi).
+           immagine B: un anello con un varco, il ciclo che si ripete ogni settimana. */
         statbars(W, H) {
           const pts = [], w = W * .62, x = (W - w) / 2, y = H / 2;
-          U.fill(pts, x, y - 54, w, 20, .12, { s: 1.5, a: .28, t: 0, r: .05 });
+          U.fill(pts, x, y - 54, w, 20, .12, { s: 1.5, a: .28, t: 0 });
           const bw = w * .36, n = Math.round(bw * 20 * .16);
           for (let i = 0; i < n; i++) {
             const px = x + Math.random() * bw;
-            pts.push({ x: px, y: y + 16 + Math.random() * 20, s: 1.6, a: .55, r: .05, t: .3 + (px - x) / bw * .7 });
+            pts.push({ x: px, y: y + 16 + Math.random() * 20, s: 1.6, a: .55, t: .3 + (px - x) / bw * .7 });
           }
+          const ccx = W / 2, ccy = H / 2, ring = Math.min(W, H) * .26;
+          pts.forEach(function (p) {
+            const ang = Math.random() * 5.6 - .3, rr = ring + (Math.random() - .5) * 10;
+            p.sx = ccx + Math.cos(ang) * rr;
+            p.sy = ccy + Math.sin(ang) * rr * .82;
+          });
           return { pts: pts, links: [] };
-        },
-
-        /* il company brain: aree, progetti e documenti collegati */
-        graph(W, H) {
-          const pts = [], links = [], cx = W / 2, cy = H / 2, idx = [], N = 6;
-          for (let k = 0; k < N; k++) {
-            const a = (k / N) * 6.283 + .45;
-            const hx = cx + Math.cos(a) * W * .26, hy = cy + Math.sin(a) * H * .28;
-            U.disc(pts, hx, hy, 7, .32, { s: 1.7, a: .68, r: .04 });
-            idx.push(pts.length - 1);
-            const leaves = 7 + ((Math.random() * 5) | 0);
-            for (let j = 0; j < leaves; j++) {
-              const b = Math.random() * 6.283, rr = rnd(38, 104);
-              U.disc(pts, hx + Math.cos(b) * rr, hy + Math.sin(b) * rr * .78, 3.4, .45, { s: 1.4, a: .42, r: .06 });
-              links.push([pts.length - 1, idx[k], .09]);
-            }
-          }
-          for (let i = 0; i < idx.length; i++)
-            for (let j = i + 1; j < idx.length; j++)
-              if (Math.random() < .55) links.push([idx[i], idx[j], .07]);
-          for (let i = 0; i < 340; i++) pts.push({ x: rnd(0, W), y: rnd(0, H), s: 1.2, a: .12, r: .55 });
-          return { pts: pts, links: links };
         }
       };
 
@@ -1091,24 +1428,52 @@
         ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
         const tint = makeTint(cv.dataset.inv === '1');
         const spec = build(W, H);
-        const cx = W / 2, cy = H / 2;
+        const isMulti = spec.mode === 'morph5';
         const parts = spec.pts.map(function (p) {
-          const ang = Math.atan2(p.y - cy, p.x - cx) + rnd(-.8, .8);
-          const dist = Math.hypot(p.x - cx, p.y - cy);
-          const push = 30 + Math.pow(Math.random(), .6) * W * .26;
-          const fixed = p.sx !== undefined;
           const size = p.s || 1.5;
+          if (isMulti) {
+            const shapes = p.shapes;
+            const segs = shapes.map(function (pt, i) {
+              const next = shapes[(i + 1) % shapes.length];
+              const ddx = next.x - pt.x, ddy = next.y - pt.y, l = Math.hypot(ddx, ddy) || 1;
+              const bow = (.1 + Math.random() * .22) * l * (Math.random() < .5 ? 1 : -1);
+              return { x: pt.x, y: pt.y, cx: (pt.x + next.x) / 2 - (ddy / l) * bow, cy: (pt.y + next.y) / 2 + (ddx / l) * bow };
+            });
+            const iang = Math.random() * 6.283, ipush = (.1 + Math.random() * .22) * Math.max(W, H);
+            return {
+              multi: segs,
+              ix: shapes[0].x + Math.cos(iang) * ipush,
+              iy: shapes[0].y + Math.sin(iang) * ipush * .86,
+              w: size,
+              c: tint(p.t === undefined ? shapes[0].x / W : p.t, (p.a === undefined ? .4 : p.a) * rnd(.7, 1.12)),
+              ph: Math.random() * 6.283,
+              am: 1.8 + Math.random() * 3.4,
+              ws: .0009 + Math.random() * .0016
+            };
+          }
+          const fixed = p.sx !== undefined;
+          const tx = fixed ? p.sx : p.x, ty = fixed ? p.sy : p.y;
+          /* punto di controllo per un arco morbido, cosi' il passaggio tra le due
+             immagini gira leggermente invece di tagliare dritto da un punto all'altro */
+          const dx = tx - p.x, dy = ty - p.y, len = Math.hypot(dx, dy) || 1;
+          const bow = (.14 + Math.random() * .3) * len * (Math.random() < .5 ? 1 : -1);
+          /* punto di partenza sparso: da qui la particella arriva componendo la prima immagine
+             appena la card entra in vista, cosi' si vede il movimento del comporsi */
+          const iang = Math.random() * 6.283, ipush = (.1 + Math.random() * .22) * Math.max(W, H);
           return {
             hx: p.x, hy: p.y,
-            sx: fixed ? p.sx : cx + Math.cos(ang) * (dist * 1.15 + push),
-            sy: fixed ? p.sy : cy + Math.sin(ang) * (dist * 1.15 + push) * .86,
+            sx: tx, sy: ty,
+            cx: (p.x + tx) / 2 - (dy / len) * bow,
+            cy: (p.y + ty) / 2 + (dx / len) * bow,
+            ix: p.x + Math.cos(iang) * ipush,
+            iy: p.y + Math.sin(iang) * ipush * .86,
             w: size, w1: fixed ? size : 1.3 + Math.random() * .8,
             c: tint(p.t === undefined ? p.x / W : p.t, (p.a === undefined ? .4 : p.a) * rnd(.7, 1.12)),
-            r: clamp((p.r === undefined ? .06 : p.r) * rnd(.5, 1.6), 0, .92),
+            start: Math.random() * .15,
+            span: .55 + Math.random() * .35,
             ph: Math.random() * 6.283,
-            am: 1 + Math.random() * 2.6,
-            ws: .00035 + Math.random() * .0007,
-            d: clamp(dist / (W * .5), 0, 1) * .35 + Math.random() * .12
+            am: 1.8 + Math.random() * 3.4,
+            ws: .0009 + Math.random() * .0016
           };
         });
         const links = spec.links.map(function (l) {
@@ -1119,28 +1484,51 @@
       if (!list.length) return;
 
       const ease = t => t * t * (3 - 2 * t);
-      const mix = (p, prog) => p.r + (1 - p.r) * ease(clamp((prog - p.d) / (1 - p.d), 0, 1));
+      const mix = (p, prog) => ease(clamp((prog - p.start) / p.span, 0, 1));
+      const bez = (p0, c, p1, t) => (1 - t) * (1 - t) * p0 + 2 * (1 - t) * t * c + t * t * p1;
 
-      /* movimento 1: la nuvola si scompone e si ricompone (come il cervello) */
-      function renderAssemble(v, prog, now) {
+      /* movimento 1: la nuvola compone un'immagine, si apre e ne compone un'altra.
+         "ik" (0->1 nel primo secondo) porta le particelle dal punto sparso "ix,iy" alla loro
+         posizione dell'immagine, cosi' all'apparire della card si vede il quadro comporsi. */
+      function renderAssemble(v, prog, now, ik) {
         const ctx = v.ctx;
         ctx.clearRect(0, 0, v.W, v.H);
         ctx.lineWidth = .6;
         for (let i = 0; i < v.links.length; i++) {
           const l = v.links[i], a = v.parts[l[0]], b = v.parts[l[1]];
           const ta = mix(a, prog), tb = mix(b, prog);
+          const ax = bez(a.hx, a.cx, a.sx, ta), ay = bez(a.hy, a.cy, a.sy, ta);
+          const bx = bez(b.hx, b.cx, b.sx, tb), by = bez(b.hy, b.cy, b.sy, tb);
           ctx.strokeStyle = l[2];
           ctx.beginPath();
-          ctx.moveTo(a.hx + (a.sx - a.hx) * ta, a.hy + (a.sy - a.hy) * ta);
-          ctx.lineTo(b.hx + (b.sx - b.hx) * tb, b.hy + (b.sy - b.hy) * tb);
+          ctx.moveTo(a.ix + (ax - a.ix) * ik, a.iy + (ay - a.iy) * ik);
+          ctx.lineTo(b.ix + (bx - b.ix) * ik, b.iy + (by - b.iy) * ik);
           ctx.stroke();
         }
         for (let i = 0; i < v.parts.length; i++) {
           const p = v.parts[i], t = mix(p, prog);
           const ox = Math.sin(now * p.ws + p.ph) * p.am, oy = Math.cos(now * p.ws * .82 + p.ph) * p.am;
           const s = p.w + (p.w1 - p.w) * t;
+          const px = bez(p.hx, p.cx, p.sx, t), py = bez(p.hy, p.cy, p.sy, t);
           ctx.fillStyle = p.c;
-          ctx.fillRect(p.hx + (p.sx - p.hx) * t + ox, p.hy + (p.sy - p.hy) * t + oy, s, s);
+          ctx.fillRect(p.ix + (px - p.ix) * ik + ox, p.iy + (py - p.iy) * ik + oy, s, s);
+        }
+      }
+
+      /* movimento 3: la nuvola cambia forma in continuazione, cerchio/rettangolo/triangolo/
+         quadrato/stella, ognuna raggiunta del tutto prima di aprirsi verso la prossima */
+      function renderMorph5(v, phase, now, ik) {
+        const ctx = v.ctx;
+        ctx.clearRect(0, 0, v.W, v.H);
+        const parts = v.parts, n = parts.length ? parts[0].multi.length : 0;
+        for (let i = 0; i < parts.length; i++) {
+          const p = parts[i];
+          const scaled = phase * n, seg = Math.floor(scaled) % n, lt = ease(scaled - Math.floor(scaled));
+          const a = p.multi[seg], b = p.multi[(seg + 1) % n];
+          const px = bez(a.x, a.cx, b.x, lt), py = bez(a.y, a.cy, b.y, lt);
+          const ox = Math.sin(now * p.ws + p.ph) * p.am, oy = Math.cos(now * p.ws * .82 + p.ph) * p.am;
+          ctx.fillStyle = p.c;
+          ctx.fillRect(p.ix + (px - p.ix) * ik + ox, p.iy + (py - p.iy) * ik + oy, p.w, p.w);
         }
       }
 
@@ -1179,7 +1567,11 @@
       }
 
       if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-        list.forEach(v => v.mode === 'pulse' ? renderPulse(v, 0) : renderAssemble(v, .05, 0));
+        list.forEach(v => {
+          if (v.mode === 'pulse') renderPulse(v, 0);
+          else if (v.mode === 'morph5') renderMorph5(v, 0, 0, 1);
+          else renderAssemble(v, 0, 0, 1);
+        });
         return;
       }
       if ('IntersectionObserver' in window) {
@@ -1197,14 +1589,34 @@
         list.forEach(function (v) { v.on = true; v.t0 = performance.now(); });
       }
 
-      const CYCLE = 15000;
+      /* la nuvola comincia sparsa e si compone nell'immagine A nel primo secondo (vedi renderAssemble/ik),
+         resta ferma, si apre verso una seconda immagine (B), resta ferma anche li', poi torna alla prima. */
+      const INTRO_MS = 950;
+      const HOLD_MS = 2600, TRANS_MS = 1000, CYCLE_MS = (HOLD_MS + TRANS_MS) * 2;
+      const smooth = k => k * k * (3 - 2 * k);
+      function introFactor(el) {
+        const k = Math.min(el / INTRO_MS, 1);
+        return 1 - Math.pow(1 - k, 3);
+      }
+      function assembleProgress(el) {
+        let t = el % CYCLE_MS;
+        if (t < HOLD_MS) return 0;                              /* immagine A ferma */
+        t -= HOLD_MS;
+        if (t < TRANS_MS) return smooth(t / TRANS_MS);          /* A -> B */
+        t -= TRANS_MS;
+        if (t < HOLD_MS) return 1;                              /* immagine B ferma */
+        t -= HOLD_MS;
+        return 1 - smooth(t / TRANS_MS);                        /* B -> A */
+      }
+      const MORPH5_SEG_MS = 12000;
       function frame(now) {
         for (let i = 0; i < list.length; i++) {
           const v = list[i];
           if (!v.on) continue;
           const el = now - v.t0;
           if (v.mode === 'pulse') renderPulse(v, el);
-          else renderAssemble(v, Math.abs(1 - 2 * ((el % CYCLE) / CYCLE)), el);
+          else if (v.mode === 'morph5') renderMorph5(v, el / MORPH5_SEG_MS, el, introFactor(el));
+          else renderAssemble(v, assembleProgress(el), el, introFactor(el));
         }
         requestAnimationFrame(frame);
       }
@@ -1227,35 +1639,32 @@
       reveals.forEach(item => observer.observe(item));
     }
 
-    /* URL della Web App di Google Apps Script (Deploy > App web) */
-    const ENDPOINT = 'https://script.google.com/macros/s/AKfycbzTesh2257voriNTgc6CJrTOywr7TkhqAAFebKengZVcRniQMVXti_khNmVhQy8P3aS3Q/exec';
+    /* ---------- STACK — scroll-stacking delle card 01/02/03 ---------- */
+    (function stack() {
+      const cards = Array.from(document.querySelectorAll('.stack-card'));
+      if (!cards.length) return;
+      if (reducedMotion) return;
 
-    document.getElementById('contactForm').addEventListener('submit', async event => {
-      event.preventDefault();
-      const form = event.currentTarget;
-      if (!form.reportValidity()) return;
-      const button = form.querySelector('button');
-      const note = document.getElementById('formNote');
-      const data = Object.fromEntries(new FormData(form).entries());
+      const stickyTop = parseFloat(getComputedStyle(cards[0]).top) || 0;
 
-      button.disabled = true;
-      button.textContent = 'Invio in corso…';
-
-      try {
-        const res = await fetch(ENDPOINT, {
-          method: 'POST',
-          headers: { 'Content-Type': 'text/plain;charset=utf-8' },
-          body: JSON.stringify({ tipo: 'lead', ...data }),
-        });
-        if (!res.ok) throw new Error('Invio non riuscito');
-        const params = new URLSearchParams({ nome: data.nome, email: data.email });
-        window.location.href = 'thankyou.html?' + params.toString();
-      } catch (err) {
-        note.textContent = 'Qualcosa è andato storto, riprova o scrivici direttamente.';
-        button.disabled = false;
-        button.textContent = 'Prenota la discovery call';
+      function update() {
+        for (let i = 0; i < cards.length; i++) {
+          const card = cards[i];
+          const next = cards[i + 1];
+          if (!next) { card.style.transform = ''; card.style.filter = ''; continue; }
+          const cardH = card.offsetHeight;
+          const nextTop = next.getBoundingClientRect().top;
+          const progress = Math.min(Math.max(1 - (nextTop - stickyTop) / cardH, 0), 1);
+          const scale = 1 - progress * .08;
+          const bright = 1 - progress * .1;
+          card.style.transform = 'scale(' + scale.toFixed(4) + ')';
+          card.style.filter = 'brightness(' + bright.toFixed(4) + ')';
+        }
+        requestAnimationFrame(update);
       }
-    });
+      requestAnimationFrame(update);
+    })();
+
     document.getElementById('year').textContent = new Date().getFullYear();
   </script>
 </body>
