@@ -1,1 +1,1 @@
-# genera
+# Second Brain AI
