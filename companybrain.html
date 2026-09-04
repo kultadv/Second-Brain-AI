@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Framework HTML minimale per una landing page SaaS ispirata ai principi visivi di Stripe.">
+  <meta name="description" content="Costruisci il tuo CompanyBrain in 8 ore: il sapere della tua azienda finalmente centralizzato e a disposizione di tutto il team, senza cambiare gli strumenti che usi già.">
   <title>CompanyBrain</title>
   <link rel="icon" href="favicon.ico">
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
@@ -438,7 +438,8 @@
       .hero .shell { min-height: 760px; padding: 120px 22px 100px; }
       .hero-copy { width: 100%; }
       h1 { font-size: clamp(45px, 14vw, 64px); }
-      .brainviz { width: 520px; top: 300px; right: -190px; opacity: .5; }
+      .brainviz { width: 750px; top: -80px; right: -130px; opacity: .7; }
+      .topbar p { font-size: 12.5px; }
       .mini-panel { position: static; width: 100%; margin-top: 38px; }
       .logo-strip .shell { padding: 24px 22px; flex-direction: column; align-items: flex-start; gap: 18px; }
       .logo-label { max-width: none; }
@@ -590,9 +591,9 @@
           <canvas id="brainCanvas" class="brain-canvas" width="1700" height="1150"></canvas>
         </div>
         <div class="hero-copy reveal">
-          <span class="eyebrow">Il cervello digitale della tua azienda</span>
+          <span class="eyebrow">Il tuo sapere a servizio dell'azienda</span>
           <h1>Costruisci il tuo CompanyBrain<br><span class="gradient-text" style="white-space:nowrap">in 8 ore.</span></h1>
-          <p class="lead">Fino al 90% di domande in meno dal tuo team, e un contesto che gestisce mail, preventivi, prima nota, content, report e i task davvero utili delle call.<br>Senza essere tecnico e senza cambiare gli strumenti che usi già.</p>
+          <p class="lead">Fino al 90% di domande in meno dal tuo team, e un contesto che gestisce mail, preventivi, prima nota, content, report e i task davvero utili delle call.<br>Senza essere tecnico e senza cambiare gli strumenti che usi già. Basato su AI e Machine Learning.</p>
           <div class="hero-actions">
             <a class="button" href="#contatto">Prenota la consulenza gratuita <span class="arrow">→</span></a>
           </div>
@@ -1206,11 +1207,21 @@
       } else {
         on = true;
       }
+      /* appena il cervello entra in vista si compone subito (invece di partire da
+         scomposto e impiegare meta' ciclo), poi il respiro continua come prima */
+      const INTRO_MS = 7000, INTRO_START = 1;
       function frame(now) {
         if (on) {
-          const phase = ((now - t0) % CYCLE) / CYCLE;
-          /* si parte da espanso: 1 = scomposto, 0 = cervello compatto */
-          draw(Math.abs(1 - 2 * phase), now - t0);
+          const el = now - t0;
+          let progress;
+          if (el < INTRO_MS) {
+            const k = el / INTRO_MS, eased = 1 - Math.pow(1 - k, 3);
+            progress = INTRO_START * (1 - eased);
+          } else {
+            const phase = (.5 + (el - INTRO_MS) / CYCLE) % 1;
+            progress = Math.abs(1 - 2 * phase);
+          }
+          draw(progress, el);
         }
         requestAnimationFrame(frame);
       }
